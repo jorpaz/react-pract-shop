@@ -30,14 +30,29 @@ module.exports = {
                 ]
             },
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.(css|s[ac]ss)$/i,
                 use: [
                     "style-loader",
                     "css-loader",
                     "sass-loader"
                 ]
-            }
-        ]
+            },
+                {
+                    test: /\.(png|jpg|svg|jpeg|webp)$/,
+                      use: [
+                         {
+                        loader: 'file-loader',
+                           options: {
+                                 name: 'images/[hash]-[name].[ext]',
+                               },
+                         },
+                         ],
+                        type: 'asset/resource',
+                        generator: {
+                        filename: 'assets/pictures/[hash][ext]'
+                        }
+                }        
+            ]
     }, 
     plugins: [
         new HtmlWebpackPlugin({
