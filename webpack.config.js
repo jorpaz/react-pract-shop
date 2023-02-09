@@ -6,7 +6,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        /* filname: 'bundle.js', */
+        filname: 'bundle.js',
+        publicPath: '/'
     },
     mode: 'development',
     resolve: {
@@ -64,6 +65,7 @@ module.exports = {
         }),
     ],
     devServer:{
+        historyApiFallback: true,
         static: path.join(__dirname, 'dist'),
         compress:true,
         port:3005,

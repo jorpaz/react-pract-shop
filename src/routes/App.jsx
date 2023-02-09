@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Layout from '../containers/Layout.jsx';
 import Login from "../containers/Login.jsx";
 import RecoveryPassword from '../containers/RecoveryPassword.jsx';
+import Home from '../pages/Home';
+import NotFound from '../pages/NotFound';
 import '../styles/global.css';
 
 const App = () => {
