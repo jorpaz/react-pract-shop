@@ -8,6 +8,7 @@ import RecoveryPassword from '../containers/RecoveryPassword.jsx';
 import NotFound from '../pages/NotFound.jsx';
 
 import '../styles/global.css';
+import Order from '../components/Order.jsx';
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
                     <Route path='/' element={<Home />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='recovery-password' element={<RecoveryPassword />} />
+                    <Route path='order' element={<Order />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
             </Layout>

@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from '../components/Header';
 import '../styles/RecoveryPassword.scss';
 
 const RecoveryPassword = () => {
   return (
+    <>
+    <Header />
     <div className="login">
         <div className="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
@@ -18,6 +21,7 @@ const RecoveryPassword = () => {
                     </p>
         </div>
     </div>
+    </>
   )
 }
 
