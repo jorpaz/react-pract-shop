@@ -1,16 +1,19 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Home from '../pages/Home.jsx';
+//? Containers
 import Layout from '../containers/Layout.jsx';
-import Login from "../containers/Login.jsx";
-import RecoveryPassword from '../containers/RecoveryPassword.jsx';
-import NotFound from '../pages/NotFound.jsx';
 
+//?Pages
+import Home from '../pages/Home.jsx';
+import NotFound from '../pages/NotFound.jsx';
+import Login from "../pages/Login.jsx";
+import RecoveryPassword from '../pages/RecoveryPassword.jsx';
+import SendEmail from '../pages/SendEmail.jsx';
+import MyAccount from '../pages/MyAccount.jsx';
+
+//? Styles
 import '../styles/global.css';
-import Menu from '../components/Menu.jsx';
-import OrderItem from '../components/OrderItem.jsx';
-import ProductInfo from '../components/ProductInfo.jsx';
 
 const App = () => {
     return (
@@ -20,7 +23,9 @@ const App = () => {
                     <Route path='/' element={<Home />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='recovery-password' element={<RecoveryPassword />} />
-                    <Route path='order' element={<ProductInfo />} />
+                    <Route path='send-email' element={<SendEmail />} />
+                    <Route path='new-password' element={<NewPassword />} />
+                    <Route path='myaccount' element={<MyAccount />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
             </Layout>

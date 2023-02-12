@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
 import "../styles/Login.scss";
-import Layout from "./Layout";
 
 const Login = () => {
   return (
