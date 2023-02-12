@@ -30,7 +30,7 @@ const Header = () => {
       </div>
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email">platzi@example.com</li>
+          <li className="navbar-email">example@example.com</li>
           <li className="navbar-shopping-cart">
             <img src="./icons/icon_shopping_cart.svg" alt="shopping cart" />
             <div>2</div>

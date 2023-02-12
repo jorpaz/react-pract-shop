@@ -1,7 +1,8 @@
 nav {
+    position: fixed;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 0 24px;
+    justify-content:space-between;
     border-bottom: 1px solid var(--very-light-pink);
 }
 
@@ -65,7 +66,7 @@ nav {
     font-weight: bold;
     position: absolute;
     top: -6px;
-    right: -3px;
+    right: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
