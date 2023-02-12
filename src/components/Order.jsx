@@ -1,11 +1,12 @@
 import React from "react";
-import '../styles/Order.scss';
+import "../styles/Order.scss";
 
 const Order = () => {
   return (
+    //? Clase 10
     <div className="my-order">
       <div className="my-order-container">
-        <h1 className="title">My order</h1>
+        <h1 className="title">My orders</h1>
         <div className="my-order-content">
           <div className="order">
             <p>
@@ -13,36 +14,7 @@ const Order = () => {
               <span>6 articles</span>
             </p>
             <p>$560.00</p>
-          </div>
-          <div className="shopping-cart">
-            <figure>
-              <img
-                src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="bike"
-              />
-            </figure>
-            <p>Bike</p>
-            <p>$30,00</p>
-          </div>
-          <div className="shopping-cart">
-            <figure>
-              <img
-                src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="bike"
-              />
-            </figure>
-            <p>Bike</p>
-            <p>$30,00</p>
-          </div>
-          <div className="shopping-cart">
-            <figure>
-              <img
-                src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="bike"
-              />
-            </figure>
-            <p>Bike</p>
-            <p>$30,00</p>
+            <img src="./icons/flechita.svg" alt="arrow" />
           </div>
         </div>
       </div>

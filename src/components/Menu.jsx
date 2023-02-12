@@ -1,51 +1,21 @@
 import React from "react";
-import Header from "./Header";
 import "../styles/Menu.scss";
 
 const Menu = () => {
   return (
-    <div className="mobile-menu">
+    //? Clase 7
+    <div className="desktop-menu">
       <ul>
         <li>
-          <a href="/">CATEGORIES</a>
-        </li>
-        <li>
-          <a href="/">All</a>
-        </li>
-        <li>
-          <a href="/">Clothes</a>
-        </li>
-        <li>
-          <a href="/">Electronics</a>
-        </li>
-        <li>
-          <a href="/">Furnitures</a>
-        </li>
-        <li>
-          <a href="/">Toys</a>
-        </li>
-        <li>
-          <a href="/">Other</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="/">My orders</a>
+          <a href="/" className="title">
+            My orders
+          </a>
         </li>
         <li>
           <a href="/">My account</a>
         </li>
-      </ul>
-      <ul>
         <li>
-          <a href="/" className="email">
-            platzi@example.com
-          </a>
-        </li>
-        <li>
-          <a href="/" className="sign-out">
-            Sign out
-          </a>
+          <a href="/">Sign out</a>
         </li>
       </ul>
     </div>
