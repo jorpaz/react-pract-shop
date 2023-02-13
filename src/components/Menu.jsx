@@ -4,7 +4,7 @@ import "../styles/Menu.scss";
 const Menu = () => {
   return (
     //? Clase 7
-    <div className="desktop-menu">
+    <div className="Menu">
       <ul>
         <li>
           <a href="/" className="title">
