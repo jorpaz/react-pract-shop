@@ -12,6 +12,13 @@ module.exports = {
     mode: 'development',
     resolve: {
         extensions: ['.js', '.jsx'],
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components/'),
+            '@containers': path.resolve(__dirname, 'src/containers/'),
+            '@styles': path.resolve(__dirname, 'src/styles/'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+        }
     },
     module: {
         rules: [
@@ -38,23 +45,12 @@ module.exports = {
                     "sass-loader"
                 ]
             },
-                {
-                    test: /\.(png|jpg|svg|jpeg|webp)$/,
-                      use: [
-                         {
-                        loader: 'file-loader',
-                           options: {
-                                 name: 'images/[hash]-[name].[ext]',
-                               },
-                         },
-                         ],
-                        type: 'asset/resource',
-                        generator: {
-                        filename: 'assets/pictures/[hash][ext]'
-                        }
-                }        
-            ]
-    }, 
+            {
+                test: /\.(png|jpg|svg|jpeg|webp)$/,
+                type: 'asset'
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html',
@@ -64,10 +60,10 @@ module.exports = {
             filename: '[name].css'
         }),
     ],
-    devServer:{
+    devServer: {
         historyApiFallback: true,
         static: path.join(__dirname, 'dist'),
-        compress:true,
-        port:3005,
+        compress: true,
+        port: 3005,
     }
 }

@@ -1,26 +1,29 @@
 import React from "react";
 import Header from "../components/Header";
-import "../styles/Login.scss";
+
+//? Styles
+import "@styles/Login.scss";
+import logo from "@logos/logo_yard_sale.svg";
 
 const Login = () => {
   return (
     <>
-    <Header />
-      <div className="login">
-        <div className="form-container">
-          <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+      <Header />
+      <div className="Login">
+        <div className="Login-container">
+          <img src={logo} alt="logo" className="logo" />
           <form action="/" className="form">
             <label htmlFor="email" className="label">
-              Email address
+              Correo Electronico
             </label>
             <input
               type="text"
               id="email"
-              placeholder="email"
+              placeholder="example@example.cm"
               className="input input-email"
-            />
+              />
             <label htmlFor="password" className="label">
-              Password
+              Contraseña
             </label>
             <input
               type="password"
@@ -30,15 +33,15 @@ const Login = () => {
             />
             <input
               type="submit"
-              defaultValue="Log in"
+              value="INGRESAR"
               className="primary-button login-button"
             />
-            <a href="/">Forgot my password</a>
+            <a href="/recovery-password">¿Olvidaste tu Contraseña?</a>
           </form>
-          <button className="secondary-button signup-button">Sign up</button>
+          <button className="secondary-button signup-button">CREAR CUENTA</button>
         </div>
       </div>
-      </>
+    </>
   );
 };
 

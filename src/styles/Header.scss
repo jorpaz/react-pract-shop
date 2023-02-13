@@ -1,3 +1,5 @@
+@import 'vars';
+
 nav {
     position: fixed;
     width: 100%;
@@ -6,11 +8,15 @@ nav {
     border-bottom: 1px solid var(--very-light-pink);
 }
 
+img{
+    margin-left: 5px;
+}
+
 .menu {
     display: none;
 }
 
-.logo {
+.nav-logo {
     width: 100px;
 }
 
@@ -55,6 +61,10 @@ nav {
 
 .navbar-shopping-cart {
     position: relative;
+}
+
+.navbar-shopping-cart img {
+    margin-right: 10px;
 }
 
 .navbar-shopping-cart div {
