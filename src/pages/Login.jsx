@@ -1,4 +1,4 @@
-import React, {useRef } from "react";
+import React, {useRef, useState } from "react";
 import Header from "../components/Header";
 
 //? Styles
@@ -9,14 +9,19 @@ const Login = () => {
   
   const form = useRef(null);
 
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(form.current);
     const data = {
       username: formData.get('email'),
-      password: formData.get('password') 
+      password: formData.get('password')
     }
     console.log(data);
+    setEmail('');
+    setPassword('');
   }
 
   return (
@@ -34,6 +39,8 @@ const Login = () => {
               name="email"
               placeholder="email"
               className="input input-email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
               />
             <label htmlFor="password" className="label">
               Contraseña
@@ -43,6 +50,8 @@ const Login = () => {
               name="password"
               placeholder="*********"
               className="input input-password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
             />
             <button
               type="submit"
