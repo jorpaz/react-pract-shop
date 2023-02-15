@@ -1,5 +1,6 @@
 import React from "react";
-import '../styles/MyOrder.scss';
+import OrderItem from "../components/OrderItem";
+import '@styles/MyOrder.scss';
 
 const MyOrder = () => {
   return (
@@ -15,7 +16,7 @@ const MyOrder = () => {
           <p>
             <span>Total</span>
           </p>
-          <p>$560.00</p>
+          <p>$ SUMA TOTAL</p>
         </div>
         <button className="primary-button">Checkout</button>
       </div>
