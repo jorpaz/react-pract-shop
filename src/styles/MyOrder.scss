@@ -1,16 +1,37 @@
 @import 'vars';
 
 .MyOrder {
-    width: 360px;
-    padding: 24px;
-    box-sizing: border-box;
-    position: absolute;
-    right: 0;
-    background-color: rgb(230, 25, 25);
-    top: 60px;
-    bottom: 0;
-    border-radius: 6px;
-    border: 1px solid var(--very-light-pink);
+	width: 360px;
+	padding: 24px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 0;
+	background-color: white;
+	top: 60px;
+	border-radius: 6px;
+	border: 1px solid var(--very-light-pink);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+//? Scroll del carrito
+.seccion-scroll::-webkit-scrollbar {
+    /* width: 0.8rem; */
+    width: 10px;
+}
+.seccion-scroll::-webkit-scrollbar-track {
+background: var( --very-light-pink );
+border-radius: 1rem;
+}
+.seccion-scroll::-webkit-scrollbar-thumb {
+background-color: var( --hospital-green );
+border-radius: 20px;
+}
+.seccion-scroll {
+    overflow-y: scroll !important;
+	overflow-x:hidden !important;
+    height: 430px;
 }
 
 .title-container {
@@ -27,6 +48,12 @@
     font-weight: bold;
 }
 
+.order-summary-container{
+    background-color: white;
+    position: sticky;
+    bottom: 0;
+}
+
 .order {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -36,6 +63,8 @@
     margin-bottom: 24px;
     border-radius: 8px;
     padding: 0 24px;
+	top: 0;
+	background-color: white;
 }
 
 .order p:nth-child(1) {
