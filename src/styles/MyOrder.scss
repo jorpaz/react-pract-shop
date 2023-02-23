@@ -1,4 +1,4 @@
-@import 'vars';
+@import '_vars';
 
 .MyOrder {
 	width: 360px;
@@ -39,6 +39,7 @@ border-radius: 20px;
 }
 
 .title-container img {
+    width: 20px;
     transform: rotate(180deg);
     margin-right: 14px;
 }

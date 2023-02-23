@@ -10,6 +10,7 @@ import "@styles/Header.scss";
 import menu from "@icons/icon_menu.svg";
 import logo from "@logos/logo_yard_sale.svg";
 import shoppingCart from "@icons/icon_shopping_cart.svg";
+import usuarioLogo from "@icons/usuario.png";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -49,7 +50,7 @@ const Header = () => {
       <div className="navbar-right">
         <ul>
           <li className="navbar-email" onClick={handleToggle}>
-            example@example.com
+            <img src={usuarioLogo} alt="usuario" />
           </li>
           <li className="navbar-shopping-cart"
               onClick={() => setToggleOrders(!toggleOrders)}>
